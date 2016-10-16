@@ -1,0 +1,11 @@
+<h1><%= @movie.name %></h1>
+<h3>Directed by: <%= @movie.director %></h3>
+<p>Ranked: <%= @movie.ranked %></p>
+<p><%= @movie.description %></p>
+
+<p><%= button_to "Upvote", upvotemovie_path(@movie), method: :put %></p>
+
+<%= button_to "Edit #{@movie.name}", edit_movie_path(@movie), method: :get%>
+<%= button_to "DELETE", movie_path(@movie), data: { confirm: "Are you sure?" }, method: :delete %>
+<%= button_to "View All Movies", movies_path, method: :get %>
+<%= button_to "View All Media", index_path, method: :get %>

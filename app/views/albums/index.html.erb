@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th scope="col">Ranking</th>
+    <th scope="col">Name</th>
+    <th scope="col">Upvote</th>
+  </tr>
+
+  <% @allalbums.each do |album| %>
+    <tr>
+      <td>Ranked: <%= album.ranked %></td>
+      <td><%= link_to album.name, album_path(album) %></td>
+      <td><%= button_to "Upvote", upvotealbum_path(album), method: :put %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= button_to "View All Media", index_path, method: :get %>
+<%= button_to "Add a Album", new_album_path, method: :get %>

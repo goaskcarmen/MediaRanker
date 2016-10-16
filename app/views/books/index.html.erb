@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th scope="col">Ranking</th>
+    <th scope="col">Name</th>
+    <th scope="col">Upvote</th>
+  </tr>
+
+  <% @allbooks.each do |book| %>
+    <tr>
+      <td>Ranked: <%= book.ranked %></td>
+      <td><%= link_to book.name, book_path(book) %></td>
+      <td><%= button_to "Upvote", upvotebook_path(book), method: :put %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= button_to "View All Media", index_path, method: :get %>
+<%= button_to "Add a Book", new_book_path, method: :get %>

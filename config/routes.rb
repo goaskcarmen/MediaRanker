@@ -1,4 +1,62 @@
 Rails.application.routes.draw do
+  root to: 'general_users#index', as: 'index'
+
+  get 'general_users/index'
+
+  # get 'albums/index'
+  #
+  # get 'albums/show'
+  #
+  # get 'albums/create'
+  #
+  # get 'albums/new'
+  #
+  # get 'albums/edit'
+  #
+  # get 'albums/update'
+  #
+  # get 'albums/destroy'
+
+  resources :albums
+
+  put 'albums/:id/upvote' => 'albums#upvote', as: 'upvotealbum'
+
+  # get 'books/index'
+  #
+  # get 'books/show'
+  #
+  # get 'books/create'
+  #
+  # get 'books/new'
+  #
+  # get 'books/edit'
+  #
+  # get 'books/update'
+  #
+  # get 'books/destroy'
+
+  resources :books
+  put 'books/:id/upvote' => 'books#upvote', as: 'upvotebook'
+
+
+  # get 'movies/index'
+  #
+  # get 'movies/show'
+  #
+  # get 'movies/create'
+  #
+  # get 'movies/new'
+  #
+  # get 'movies/edit'
+  #
+  # get 'movies/update'
+  #
+  # get 'movies/destroy'
+
+  resources :movies
+  put 'movies/:id/upvote' => 'movies#upvote', as: 'upvotemovie'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
