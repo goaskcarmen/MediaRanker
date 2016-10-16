@@ -1,0 +1,16 @@
+<article>
+<%= form_for @book do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name, cols:"50" %></p>
+
+  <p><%= f.label :author %></p>
+  <p><%= f.text_field :author, cols:"50" %></p>
+
+  <p><%= f.label :description %></p>
+  <p><%= f.text_area :description, cols:"50", rows:"10" %></p>
+
+  <%= f.hidden_field :ranked, :value => 0 %>
+
+  <%= f.submit "Save" %>
+<% end %>
+</article>

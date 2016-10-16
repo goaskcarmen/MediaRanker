@@ -1,0 +1,11 @@
+<h1><%= @album.name %></h1>
+<h3>Recorded by: <%= @album.artist %></h3>
+<p>Ranked: <%= @album.ranked %></p>
+<p><%= @album.description %></p>
+
+<p><%= button_to "Upvote", upvotealbum_path(@album), method: :put %></p>
+
+<%= button_to "Edit #{@album.name}", edit_album_path(@album), method: :get%>
+<%= button_to "DELETE", album_path(@album), data: { confirm: "Are you sure?" }, method: :delete %>
+<%= button_to "View All albums", albums_path, method: :get %>
+<%= button_to "View All Media", index_path, method: :get %>
