@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  ranked: 1
-  author: MyString
-  description: MyString
+two_by_two:
+  name: Two by Two
+  ranked: 30
+  author: nicholas sparks
+  description: "A book"
 
-two:
-  name: MyString
-  ranked: 1
-  author: MyString
-  description: MyString
+harry_potter:
+  name: Harry Potter
+  ranked: 50
+  author: j.k. rowling
+  description: "Best seller of a decade"
