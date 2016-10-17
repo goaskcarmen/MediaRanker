@@ -1,31 +1,39 @@
-<section>
-  <h1>Top Movies</h1>
-  <% @movies.each do |movie| %>
-    <h2><%= link_to movie.name, movie_path(movie) %></h2>
-    <p>Ranked: <%= movie.ranked %></p>
-  <% end %>
+<div class="row">
+  <div class="small-4 medium-4 large-4 column">
+    <section>
+      <h1>Top Movies</h1>
+      <% @movies.each do |movie| %>
+        <h5><%= link_to movie.name, movie_path(movie) %></h5>
+        <p>Ranked: <%= movie.ranked %></p>
+      <% end %>
 
-  <%= link_to "View More Movies", movies_path %>
-</section>
+      <%= link_to "View More Movies", movies_path %>
+    </section>
+  </div>
 
-<section>
-  <h1>Top Books</h1>
+  <div class="small-4 medium-4 large-4 column">
+    <section>
+      <h1>Top Books</h1>
 
-  <% @books.each do |book| %>
-    <h2><%= link_to book.name, book_path(book) %></h2>
-    <p>Ranked: <%= book[:ranked] %></p>
-  <% end %>
+      <% @books.each do |book| %>
+        <h5><%= link_to book.name, book_path(book) %></h5>
+        <p>Ranked: <%= book[:ranked] %></p>
+      <% end %>
 
-  <%= link_to "View More Books", books_path %>
-</section>
+      <%= link_to "View More Books", books_path %>
+    </section>
+  </div>
 
-<section>
-  <h1>Top Albums</h1>
+  <div class="small-4 medium-4 large-4 column">
+    <section>
+      <h1>Top Albums</h1>
 
-  <% @albums.each do |album| %>
-    <h2><%= link_to album.name, album_path(album) %></h2>
-    <p>Ranked: <%= album[:ranked] %></p>
-  <% end %>
+      <% @albums.each do |album| %>
+        <h5><%= link_to album.name, album_path(album) %></h5>
+        <p>Ranked: <%= album[:ranked] %></p>
+      <% end %>
 
-  <%= link_to "View More Albums", albums_path %>
-</section>
+      <%= link_to "View More Albums", albums_path %>
+    </section>
+  </div>
+</div>
