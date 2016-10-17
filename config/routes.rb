@@ -3,22 +3,16 @@ Rails.application.routes.draw do
 
   get 'general_users/index'
 
-  # get 'albums/index'
-  #
-  # get 'albums/show'
-  #
-  # get 'albums/create'
-  #
-  # get 'albums/new'
-  #
-  # get 'albums/edit'
-  #
-  # get 'albums/update'
-  #
-  # get 'albums/destroy'
+  # get "/albums", to: "albums#index",   as: :albums
+  # post "/albums", to: "albums#create"
+  # get "/albums/:id", to: "albums#show",    as: :album
+  # patch "/albums/:id", to: "albums#update"
+  # put "/albums/:id", to: "albums#update"
+  # delete "/albums/:id", to: "albums#destroy"
+  # get "/albums/new", to: "albums#new",     as: :new_album
+  # get "/albums/:id/edit", to: "albums#edit",    as: :edit_album
 
   resources :albums
-
   put 'albums/:id/upvote' => 'albums#upvote', as: 'upvotealbum'
 
   # get 'books/index'

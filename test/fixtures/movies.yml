@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  ranked: 1
-  director: MyString
-  description: MyString
+the_hunger_game:
+  name: The Hunger Games
+  ranked: 19
+  director: Francis Lawrence
+  description: "Based on a book."
 
-two:
-  name: MyString
-  ranked: 1
-  director: MyString
-  description: MyString
+independence_day:
+  name: Independence Day
+  ranked: 15
+  director: Roland Emmerich
+  description: "A sci-fi movie"

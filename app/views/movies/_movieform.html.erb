@@ -1,16 +1,20 @@
-<article>
-<%= form_for @movie do |f| %>
-  <p><%= f.label :name %></p>
-  <p><%= f.text_field :name, cols:"50" %></p>
+<div class="row">
+  <div class="medium-6 large-6 column">
+    <article>
+    <%= form_for @movie do |f| %>
+      <p><%= f.label :name %></p>
+      <p><%= f.text_field :name %></p>
 
-  <p><%= f.label :director %></p>
-  <p><%= f.text_field :director, cols:"50" %></p>
+      <p><%= f.label :director %></p>
+      <p><%= f.text_field :director %></p>
 
-  <p><%= f.label :description %></p>
-  <p><%= f.text_area :description, cols:"50", rows:"10" %></p>
+      <p><%= f.label :description %></p>
+      <p><%= f.text_area :description, rows:"5" %></p>
 
-  <%= f.hidden_field :ranked, :value => 0 %>
+      <%= f.hidden_field :ranked, :value => 0 %>
 
-  <%= f.submit "Save" %>
-<% end %>
-</article>
+      <%= f.submit "Save" %>
+    <% end %>
+    </article>
+  </div>
+</div>

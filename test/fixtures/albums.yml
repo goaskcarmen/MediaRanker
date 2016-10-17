@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  ranked: 1
-  artist: MyString
-  description: MyString
+abbey_road:
+  name: Abbey Road
+  ranked: 10
+  artist: The Beatles
+  description: "This is a Beattles' album"
 
-two:
-  name: MyString
-  ranked: 1
-  artist: MyString
-  description: MyString
+hometown_glory:
+  name: Hometown Glory
+  ranked: 15
+  artist: Adele
+  description: "Adele's first album"
+
+greatest_hits:
+  name: Greatest Hits
+  ranked: 12
+  artist: Journey
+  description: "Best seller on Amazon."
