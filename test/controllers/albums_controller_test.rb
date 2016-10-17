@@ -36,8 +36,9 @@ class AlbumsControllerTest < ActionController::TestCase
   end
 
   test "should be able to update" do
-    patch :update, {id: albums(:abbey_road).id}, :album => {:description => "Another Beattle's album."}
-    assert_equal "Another Beattle's album.", Album.find(albums(:abbey_road)).description
+    patch :update, {id: albums(:abbey_road).id, :album => albums(:abbey_road).attributes.merge({"description" => "Another album."})}
+
+    assert_equal "Another album.", Album.find(albums(:abbey_road)).description
   end
 
   test "Should be able to delete an album" do

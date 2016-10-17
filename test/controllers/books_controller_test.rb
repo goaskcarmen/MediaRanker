@@ -36,7 +36,7 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should be able to update" do
-    patch :update, {id: books(:harry_potter).id}, :book => {:description => "Best seller this year."}
+    patch :update, {id: books(:harry_potter).id, :book => books(:harry_potter).attributes.merge({"description" => "Best seller this year."})}
     assert_equal "Best seller this year.", Book.find(books(:harry_potter)).description
   end
 

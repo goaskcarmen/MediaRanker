@@ -30,6 +30,7 @@ class AlbumsController < ApplicationController
 
     @album.update_attributes({name: params[:album][:name], artist: params[:album][:artist], ranked: params[:album][:ranked], description: params[:album][:description]})
 
+
     redirect_to :action => "show", :id => @album.id
   end
 

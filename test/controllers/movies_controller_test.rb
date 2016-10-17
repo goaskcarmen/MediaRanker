@@ -36,7 +36,7 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should be able to update" do
-    patch :update, {id: movies(:independence_day).id}, :movie => {:description => "Best movie."}
+    patch :update, {id: movies(:independence_day).id, :movie => movies(:independence_day).attributes.merge({"description" => "Best movie."})}
     assert_equal "Best movie.", Movie.find(movies(:independence_day)).description
   end
 
